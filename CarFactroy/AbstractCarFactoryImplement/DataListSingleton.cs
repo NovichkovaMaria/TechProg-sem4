@@ -1,7 +1,7 @@
-﻿using AbstractCarFactoryImplement.Models;
+﻿using AbstractFactoryListImplement.Models;
 using System.Collections.Generic;
 
-namespace AbstractCarFactoryImplement
+namespace AbstractFactoryListImplement
 {
     public class DataListSingleton
     {

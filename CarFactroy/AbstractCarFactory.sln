@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractCarFactoryView", "C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractFactoryBusinessLogic", "AbstractFactoryBusinessLogic\AbstractFactoryBusinessLogic.csproj", "{84B807AC-FAA9-4B87-9322-8B5CE7CF8247}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractCarFactoryImplement", "AbstractCarFactoryImplement\AbstractCarFactoryImplement.csproj", "{1D10B2F2-6EBA-4F21-A0ED-5367ED6377D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractFactoryListImplement", "AbstractCarFactoryImplement\AbstractFactoryListImplement.csproj", "{1D10B2F2-6EBA-4F21-A0ED-5367ED6377D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

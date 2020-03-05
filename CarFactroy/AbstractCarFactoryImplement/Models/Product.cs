@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AbstractCarFactoryImplement.Models
+namespace AbstractFactoryListImplement.Models
 {
     // Изделие, изготавливаемое на автозаводе
     public class Product

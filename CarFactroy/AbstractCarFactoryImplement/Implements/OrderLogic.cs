@@ -1,12 +1,12 @@
 ﻿using AbstractFactoryBusinessLogic.BindingModels;
 using AbstractFactoryBusinessLogic.Interfaces;
 using AbstractFactoryBusinessLogic.ViewModels;
-using AbstractCarFactoryImplement.Models;
+using AbstractFactoryListImplement.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace AbstractCarFactoryImplement.Implements
+namespace AbstractFactoryListImplement.Implements
 {   
     public class OrderLogic : IOrderLogic
     {

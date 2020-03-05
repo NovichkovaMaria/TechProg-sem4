@@ -1,10 +1,10 @@
-﻿using AbstractCarFactoryImplement.Models;
+﻿using AbstractFactoryListImplement.Models;
 using System.Collections.Generic;
 using AbstractFactoryBusinessLogic.BindingModels;
 using AbstractFactoryBusinessLogic.Interfaces;
 using AbstractFactoryBusinessLogic.ViewModels;
 using System;
-namespace AbstractCarFactoryImplement.Implements
+namespace AbstractFactoryListImplement.Implements
 {
     public class AutoPartLogic : IAutoPartLogic
     {

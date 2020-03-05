@@ -144,9 +144,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AbstractCarFactoryImplement\AbstractCarFactoryImplement.csproj">
+    <ProjectReference Include="..\AbstractCarFactoryImplement\AbstractFactoryListImplement.csproj">
       <Project>{1d10b2f2-6eba-4f21-a0ed-5367ed6377d0}</Project>
-      <Name>AbstractCarFactoryImplement</Name>
+      <Name>AbstractFactoryListImplement</Name>
     </ProjectReference>
     <ProjectReference Include="..\AbstractFactoryBusinessLogic\AbstractFactoryBusinessLogic.csproj">
       <Project>{84b807ac-faa9-4b87-9322-8b5ce7cf8247}</Project>

@@ -1,7 +1,7 @@
 ﻿using System;
 using AbstractFactoryBusinessLogic.Enums;
 
-namespace AbstractCarFactoryImplement.Models
+namespace AbstractFactoryListImplement.Models
 {
     // Заказ
     public class Order
