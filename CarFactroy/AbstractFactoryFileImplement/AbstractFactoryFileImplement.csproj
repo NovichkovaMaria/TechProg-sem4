@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AbstractCarFactoryImplement\AbstractFactoryListImplement.csproj" />
+    <ProjectReference Include="..\AbstractFactoryBusinessLogic\AbstractFactoryBusinessLogic.csproj" />
+    <ProjectReference Include="..\CarFactroyView\AbstractCarFactoryView.csproj" />
+  </ItemGroup>
+
+</Project>
