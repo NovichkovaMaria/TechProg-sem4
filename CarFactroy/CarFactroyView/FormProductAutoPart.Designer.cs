@@ -43,7 +43,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(148, 27);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Части для сборки:";
+            this.label1.Text = "Часть автомобиля:";
             // 
             // label2
             // 
@@ -101,7 +101,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormProductAutoPart";
-            this.Text = "Части для сборки автомобиля";
+            this.Text = "Часть сборки автомобиля";
             this.ResumeLayout(false);
             this.PerformLayout();
 

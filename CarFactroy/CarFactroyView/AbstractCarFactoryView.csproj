@@ -152,6 +152,10 @@
       <Project>{84b807ac-faa9-4b87-9322-8b5ce7cf8247}</Project>
       <Name>AbstractFactoryBusinessLogic</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AbstractFactoryFileImplement\AbstractFactoryFileImplement.csproj">
+      <Project>{d2826154-1037-4487-b16d-78d803b2a1e3}</Project>
+      <Name>AbstractFactoryFileImplement</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

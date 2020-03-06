@@ -1,7 +1,8 @@
 ﻿using System;
 using AbstractFactoryBusinessLogic.BindingModels;
 using AbstractFactoryBusinessLogic.Enums;
-using AbstractFactoryBusinessLogic.Interfaces;
+using AbstractFactoryBusinessLogic.Interfaces;
+
 
 namespace AbstractFactoryBusinessLogic.BusinessLogics
 {

@@ -7,7 +7,6 @@
   <ItemGroup>
     <ProjectReference Include="..\AbstractCarFactoryImplement\AbstractFactoryListImplement.csproj" />
     <ProjectReference Include="..\AbstractFactoryBusinessLogic\AbstractFactoryBusinessLogic.csproj" />
-    <ProjectReference Include="..\CarFactroyView\AbstractCarFactoryView.csproj" />
   </ItemGroup>
 
 </Project>

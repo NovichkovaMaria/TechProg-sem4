@@ -35,7 +35,7 @@ namespace AbstractFactoryFileImplement.Implements
                 element = new Order { Id = maxId + 1 };
                 source.Orders.Add(element);
             }
-            element.productId = model.productId == 0 ? element.productId : model.productId;
+            element.ProductId = model.ProductId == 0 ? element.ProductId : model.ProductId;
             element.Count = model.Count;
             element.Sum = model.Sum;
             element.Status = model.Status;
@@ -62,7 +62,7 @@ namespace AbstractFactoryFileImplement.Implements
             .Select(rec => new OrderViewModel
             {
                 Id = rec.Id,
-                productName = source.products.FirstOrDefault(x => x.Id == rec.productId)?.productName,
+                ProductName = source.Products.FirstOrDefault(x => x.Id == rec.ProductId)?.ProductName,
                 Count = rec.Count,
                 Sum = rec.Sum,
                 Status = rec.Status,
