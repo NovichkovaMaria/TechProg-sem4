@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Unity;
 
-namespace CarFactroyView
+namespace AbstractCarFactoryView
 {
     public partial class FormProducts : Form
     {
