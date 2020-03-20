@@ -1,4 +1,4 @@
-﻿namespace CarFactroyView
+﻿namespace CarFactoryView
 {
     partial class FormAutoPart
     {

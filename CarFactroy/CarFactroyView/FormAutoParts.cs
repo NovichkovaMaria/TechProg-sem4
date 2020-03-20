@@ -4,7 +4,7 @@ using AbstractFactoryBusinessLogic.Interfaces;
 using AbstractFactoryBusinessLogic.BindingModels;
 using System.Windows.Forms;
 
-namespace CarFactroyView
+namespace CarFactoryView
 {
     public partial class FormAutoParts : Form
     {

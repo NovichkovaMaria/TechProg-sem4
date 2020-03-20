@@ -6,7 +6,7 @@ using System.Windows.Forms;
 using Unity;
 using AbstractFactoryBusinessLogic.ViewModels;
 
-namespace CarFactroyView
+namespace CarFactoryView
 {
     public partial class FormProductAutoPart : Form
     {   
