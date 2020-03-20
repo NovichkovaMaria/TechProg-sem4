@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7A425092-2522-440A-A9D9-E988B23D3639}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>CarFactroyView</RootNamespace>
-    <AssemblyName>CarFactroyView</AssemblyName>
+    <RootNamespace>CarFactoryView</RootNamespace>
+    <AssemblyName>CarFactoryView</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -128,6 +128,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

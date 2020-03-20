@@ -6,7 +6,7 @@ using System.Windows.Forms;
 using Unity;
 using Unity.Lifetime;
 
-namespace CarFactroyView
+namespace CarFactoryView
 {
     static class Program
     {/// <summary>

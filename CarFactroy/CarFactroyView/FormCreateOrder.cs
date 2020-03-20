@@ -6,7 +6,7 @@ using System;
 using System.Windows.Forms;
 using Unity;
 
-namespace CarFactroyView
+namespace CarFactoryView
 {
     public partial class FormCreateOrder : Form
     {
