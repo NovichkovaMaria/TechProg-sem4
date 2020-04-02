@@ -5,9 +5,6 @@ using System.ComponentModel.DataAnnotations;
 
 namespace AbstractFactoryDatabaseImplement.Models
 {
-    /// <summary>
-    /// Сколько компонентов, требуется при изготовлении изделия
-    /// </summary>
     public class ProductAutoPart
     {
         public int Id { get; set; }

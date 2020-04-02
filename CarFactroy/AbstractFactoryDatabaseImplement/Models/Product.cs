@@ -13,9 +13,14 @@ namespace AbstractFactoryDatabaseImplement.Models
 
         [Required]
         public decimal Price { get; set; }
-
-        public virtual ProductAutoPart ProductAutoPart { get; set; }
-
+        public virtual List<ProductAutoPart> ProductAutoPart { get; set; }
         public virtual List<Order> Orders { get; set; }
     }
 }
+
+
+
+
+
+
+
