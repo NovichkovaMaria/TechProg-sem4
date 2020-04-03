@@ -28,11 +28,11 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
                         JustificationValues = JustificationValues.Center
                     }
                 }));
-                foreach (var flower in info.AutoParts)
+                foreach (var AutoPart in info.AutoParts)
                 {
                     docBody.AppendChild(CreateParagraph(new WordParagraph
                     {
-                        Texts = new List<string> { flower.AutoPartName },
+                        Texts = new List<string> { AutoPart.AutoPartName },
                         TextProperties = new WordParagraphProperties
                         {
                             Size = "24",
