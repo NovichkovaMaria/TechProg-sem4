@@ -44,7 +44,6 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
                 wordDocument.MainDocumentPart.Document.Save();
             }
         }
-
         private static SectionProperties CreateSectionProperties()
         {
             SectionProperties properties = new SectionProperties();

@@ -4,7 +4,8 @@ using DocumentFormat.OpenXml.Office2010.Excel;
 using DocumentFormat.OpenXml.Office2013.Excel;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
-using System.Linq;
+using System.Linq;
+
 namespace AbstractFactoryBusinessLogic.BusinessLogics
 {
     static class SaveToExcel
@@ -71,7 +72,7 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
                         StyleIndex = 0U
                     });
                     rowIndex++;
-                    foreach (var product in pc.Products)
+                    foreach (var Product in pc.Products)
                     {
                         InsertCellInWorksheet(new ExcelCellParameters
                         {
@@ -79,17 +80,16 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
                             ShareStringPart = shareStringPart,
                             ColumnName = "B",
                             RowIndex = rowIndex,
-                            Text = product.Item1,
+                            Text = Product.Item1,
                             StyleIndex = 1U
                         });
                         InsertCellInWorksheet(new ExcelCellParameters
                         {
-
                             Worksheet = worksheetPart.Worksheet,
                             ShareStringPart = shareStringPart,
                             ColumnName = "C",
                             RowIndex = rowIndex,
-                            Text = product.Item2.ToString(),
+                            Text = Product.Item2.ToString(),
                             StyleIndex = 1U
                         });
                         rowIndex++;
@@ -108,8 +108,6 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
                 workbookpart.Workbook.Save();
             }
         }
-
-        /// Настройка стилей для файла
         private static void CreateStyles(WorkbookPart workbookpart)
         {
             WorkbookStylesPart sp = workbookpart.AddNewPart<WorkbookStylesPart>();
@@ -306,8 +304,6 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
             sp.Stylesheet.Append(tableStyles);
             sp.Stylesheet.Append(stylesheetExtensionList);
         }
-
-        /// Добааляем новую ячейку в лист
         private static void InsertCellInWorksheet(ExcelCellParameters cellParameters)
         {
             SheetData sheetData = cellParameters.Worksheet.GetFirstChild<SheetData>();
@@ -317,7 +313,7 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
            cellParameters.RowIndex).Count() != 0)
             {
                 row = sheetData.Elements<Row>().Where(r => r.RowIndex ==
-                cellParameters.RowIndex).First();
+    cellParameters.RowIndex).First();
             }
             else
             {
@@ -363,8 +359,6 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
             cell.DataType = new EnumValue<CellValues>(CellValues.SharedString);
             cell.StyleIndex = cellParameters.StyleIndex;
         }
-
-        /// Объединение ячеек
         private static void MergeCells(ExcelMergeParameters mergeParameters)
         {
             MergeCells mergeCells;

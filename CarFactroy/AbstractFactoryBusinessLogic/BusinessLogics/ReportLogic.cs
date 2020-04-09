@@ -12,23 +12,20 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
     public class ReportLogic
     {
         private readonly IAutoPartLogic AutoPartLogic;
-        private readonly IProductLogic productLogic;
+        private readonly IProductLogic ProductLogic;
         private readonly IOrderLogic orderLogic;
-        public ReportLogic(IProductLogic productLogic, IAutoPartLogic AutoPartLogic,
+        public ReportLogic(IProductLogic ProductLogic, IAutoPartLogic AutoPartLogic,
        IOrderLogic orderLLogic)
         {
-            this.productLogic = productLogic;
+            this.ProductLogic = ProductLogic;
             this.AutoPartLogic = AutoPartLogic;
             this.orderLogic = orderLLogic;
         }
-        /// <summary>
-        /// Получение списка компонент с указанием, в каких изделиях используются
-        /// </summary>
-        /// <returns></returns>
+
         public List<ReportProductAutoPartViewModel> GetProductAutoPart()
         {
             var AutoParts = AutoPartLogic.Read(null);
-            var products = productLogic.Read(null);
+            var Products = ProductLogic.Read(null);
             var list = new List<ReportProductAutoPartViewModel>();
             foreach (var AutoPart in AutoParts)
             {
@@ -38,25 +35,20 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
                     Products = new List<Tuple<string, int>>(),
                     TotalCount = 0
                 };
-                foreach (var product in products)
+                foreach (var Product in Products)
                 {
-                    if (product.ProductAutoParts.ContainsKey(AutoPart.Id))
+                    if (Product.ProductAutoParts.ContainsKey(AutoPart.Id))
                     {
-                        record.Products.Add(new Tuple<string, int>(product.ProductName,
-                       product.ProductAutoParts[AutoPart.Id].Item2));
+                        record.Products.Add(new Tuple<string, int>(Product.ProductName,
+                       Product.ProductAutoParts[AutoPart.Id].Item2));
                         record.TotalCount +=
-                       product.ProductAutoParts[AutoPart.Id].Item2;
+                       Product.ProductAutoParts[AutoPart.Id].Item2;
                     }
                 }
                 list.Add(record);
             }
             return list;
         }
-        /// <summary>
-        /// Получение списка заказов за определенный период
-        /// </summary>
-        /// <param name="model"></param>
-        /// <returns></returns>
         public List<ReportOrdersViewModel> GetOrders(ReportBindingModel model)
         {
             return orderLogic.Read(new OrderBindingModel
@@ -74,10 +66,6 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
             })
            .ToList();
         }
-        /// <summary>
-        /// Сохранение компонент в файл-Word
-        /// </summary>
-        /// <param name="model"></param>
         public void SaveAutoPartsToWordFile(ReportBindingModel model)
         {
             SaveToWord.CreateDoc(new WordInfo
@@ -87,10 +75,6 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
                 AutoParts = AutoPartLogic.Read(null)
             });
         }
-        /// <summary>
-        /// Сохранение компонент с указаеним продуктов в файл-Excel
-        /// </summary>
-        /// <param name="model"></param>
         public void SaveProductAutoPartToExcelFile(ReportBindingModel model)
         {
             SaveToExcel.CreateDoc(new ExcelInfo
@@ -100,10 +84,6 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
                 ProductAutoParts = GetProductAutoPart()
             });
         }
-        /// <summary>
-        /// Сохранение заказов в файл-Pdf
-        /// </summary>
-        /// <param name="model"></param>
         public void SaveOrdersToPdfFile(ReportBindingModel model)
         {
             SaveToPdf.CreateDoc(new PdfInfo

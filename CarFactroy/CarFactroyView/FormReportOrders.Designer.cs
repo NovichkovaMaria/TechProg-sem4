@@ -35,6 +35,7 @@
             this.ButtonMake = new System.Windows.Forms.Button();
             this.ButtonToPdf = new System.Windows.Forms.Button();
             this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
             this.SuspendLayout();
             // 
             // dateTimePickerFrom
@@ -77,6 +78,7 @@
             this.ButtonMake.TabIndex = 4;
             this.ButtonMake.Text = "Сформировать";
             this.ButtonMake.UseVisualStyleBackColor = true;
+            this.ButtonMake.Click += new System.EventHandler(this.ButtonMake_Click);
             // 
             // ButtonToPdf
             // 
@@ -86,6 +88,7 @@
             this.ButtonToPdf.TabIndex = 5;
             this.ButtonToPdf.Text = "В PDF";
             this.ButtonToPdf.UseVisualStyleBackColor = true;
+            this.ButtonToPdf.Click += new System.EventHandler(this.ButtonToPdf_Click);
             // 
             // reportViewer
             // 
@@ -124,5 +127,6 @@
         private System.Windows.Forms.Button ButtonMake;
         private System.Windows.Forms.Button ButtonToPdf;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer;
+        private System.DirectoryServices.DirectoryEntry directoryEntry1;
     }
 }
