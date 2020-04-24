@@ -39,7 +39,7 @@
             // 
             // ButtonSaveToExcel
             // 
-            this.ButtonSaveToExcel.Location = new System.Drawing.Point(12, 12);
+            this.ButtonSaveToExcel.Location = new System.Drawing.Point(39, 12);
             this.ButtonSaveToExcel.Name = "ButtonSaveToExcel";
             this.ButtonSaveToExcel.Size = new System.Drawing.Size(294, 31);
             this.ButtonSaveToExcel.TabIndex = 0;
@@ -57,13 +57,13 @@
             this.dataGridViewTextBoxColumn2,
             this.Column4,
             this.dataGridViewTextBoxColumn3});
-            this.dataGridView.Location = new System.Drawing.Point(-2, 68);
+            this.dataGridView.Location = new System.Drawing.Point(39, 49);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowHeadersVisible = false;
             this.dataGridView.RowHeadersWidth = 51;
             this.dataGridView.RowTemplate.Height = 24;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView.Size = new System.Drawing.Size(924, 382);
+            this.dataGridView.Size = new System.Drawing.Size(724, 382);
             this.dataGridView.TabIndex = 6;
             // 
             // dataGridViewTextBoxColumn1
@@ -79,14 +79,14 @@
             this.dataGridViewTextBoxColumn2.HeaderText = "Часть";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 300;
+            this.dataGridViewTextBoxColumn2.Width = 150;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Изделие";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
-            this.Column4.Width = 300;
+            this.Column4.Width = 150;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -99,7 +99,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(924, 450);
+            this.ClientSize = new System.Drawing.Size(815, 450);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.ButtonSaveToExcel);
             this.Name = "FormReportProductAutoParts";
