@@ -40,17 +40,7 @@ namespace AbstractCarFactoryView
         {
             try
             {
-                var list = orderLogic.Read(null);
-                if (list != null)
-                {
-                    dataGridView.DataSource = list;
-                    dataGridView.Columns[0].Visible = false;
-                    dataGridView.Columns[1].Visible = false;
-                    dataGridView.Columns[2].Visible = false;
-                    dataGridView.Columns[5].Visible = false;
-                    dataGridView.Columns[5].AutoSizeMode =
-                   DataGridViewAutoSizeColumnMode.Fill;
-                }
+                Program.ConfigGrid(orderLogic.Read(null), dataGridView);
             }
             catch (Exception ex)
             {
@@ -58,6 +48,7 @@ namespace AbstractCarFactoryView
                MessageBoxIcon.Error);
             }
         }
+    
         private void частиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = Container.Resolve<FormAutoParts>();
@@ -140,6 +131,27 @@ namespace AbstractCarFactoryView
         {
             var form = Container.Resolve<FormMessages>();
             form.ShowDialog();
+        }
+        private void создатьБэкапToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (backUpAbstractLogic != null)
+                {
+                    var fbd = new FolderBrowserDialog();
+                    if (fbd.ShowDialog() == DialogResult.OK)
+                    {
+                        backUpAbstractLogic.CreateArchive(fbd.SelectedPath);
+                        MessageBox.Show("Бекап создан", "Сообщение",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK,
+               MessageBoxIcon.Error);
+            }
         }
     }
 }

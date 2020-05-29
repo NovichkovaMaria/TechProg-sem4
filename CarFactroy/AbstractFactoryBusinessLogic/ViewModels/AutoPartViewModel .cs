@@ -1,12 +1,18 @@
-﻿using System.ComponentModel;
+﻿using AbstractFactoryBusinessLogic.Attributes;
+using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace AbstractFactoryBusinessLogic.ViewModels
 {
     // Компонент, требуемый для изготовления изделия
-    public class AutoPartViewModel
+    public class AutoPartViewModel : BaseViewModel
     {
-        public int Id { get; set; }
-        [DisplayName("Название компонента")]
+        [Column(title: "Часть", gridViewAutoSize: GridViewAutoSize.Fill)]
         public string AutoPartName { get; set; }
+        public override List<string> Properties() => new List<string>
+        {
+            "Id",
+            "AutoPartName"
+        };
     }
 }

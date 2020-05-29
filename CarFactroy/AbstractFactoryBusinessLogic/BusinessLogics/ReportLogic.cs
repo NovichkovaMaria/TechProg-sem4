@@ -60,7 +60,7 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
             SaveToWord.CreateDoc(new WordInfo
             {
                 FileName = model.FileName,
-                Title = "Список компонент",
+                Title = "Список изделий",
                 Products = ProductLogic.Read(null)
             });
         }
@@ -78,7 +78,7 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
             SaveToPdf.CreateDoc(new PdfInfo
             {
                 FileName = model.FileName,
-                Title = "Список компонентов по частям автомобиля",
+                Title = "Список изделий по частям автомобиля",
                 ProductAutoParts = GetProductAutoPart(),
             });
         }

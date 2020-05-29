@@ -12,6 +12,7 @@ using Unity;
 using Unity.Lifetime;
 using AbstractFactoryBusinessLogic.Attributes;
 using System.Collections.Generic;
+using AbstractFactoryBusinessLogic.ViewModels;
 
 namespace AbstractCarFactoryView
 {

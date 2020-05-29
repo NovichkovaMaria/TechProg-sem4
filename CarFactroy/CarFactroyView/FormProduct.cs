@@ -23,48 +23,15 @@ namespace AbstractCarFactoryView
         }
         private void FormProduct_Load(object sender, EventArgs e)
         {
-            if (id.HasValue)
-            {
-                try
-                {
-                    ProductViewModel view = logic.Read(new ProductBindingModel
-                    {
-                        Id =
-                   id.Value
-                    })?[0];
-                    if (view != null)
-                    {
-                        textBoxName.Text = view.ProductName;
-                        textBoxPrice.Text = view.Price.ToString();
-                        productAutoParts = view.ProductAutoParts;
-                        LoadData();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK,
-                   MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                productAutoParts = new Dictionary<int, (string, int)>();
-            }
+            LoadData();
         }
         private void LoadData()
         {
             try
             {
-                if (productAutoParts != null)
-                {
-                    dataGridView.Rows.Clear();
-                    foreach (var pc in productAutoParts)
-                    {
-                        dataGridView.Rows.Add(new object[] { pc.Key, pc.Value.Item1,
-pc.Value.Item2 });
-                    }
-                }
+                Program.ConfigGrid(logic.Read(null), dataGridView);
             }
+            
             catch (Exception ex)
             {
 
