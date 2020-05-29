@@ -21,7 +21,7 @@ namespace AbstractFactoryFileImplement.Implements
            model.ProductName && rec.Id != model.Id);
             if (element != null)
             {
-                throw new Exception("Уже есть букет с таким названием");
+                throw new Exception("Уже есть изделие с таким названием");
             }
             if (model.Id.HasValue)
             {
@@ -33,7 +33,7 @@ namespace AbstractFactoryFileImplement.Implements
             }
             else
             {
-                int maxId = source.Products.Count > 0 ? source.AutoParts.Max(rec =>
+                int maxId = source.Products.Count > 0 ? source.Products.Max(rec =>
                rec.Id) : 0;
                 element = new Product { Id = maxId + 1 };
                 source.Products.Add(element);
@@ -52,14 +52,14 @@ namespace AbstractFactoryFileImplement.Implements
             }
             int maxPCId = source.ProductAutoParts.Count > 0 ?
            source.ProductAutoParts.Max(rec => rec.Id) : 0;
-            foreach (var pc in model.ProductAutoParts)
+            foreach (var mz in model.ProductAutoParts)
             {
                 source.ProductAutoParts.Add(new ProductAutoPart
                 {
                     Id = ++maxPCId,
                     ProductId = element.Id,
-                    AutoPartId = pc.Key,
-                    Count = pc.Value.Item2
+                    AutoPartId = mz.Key,
+                    Count = mz.Value.Item2
                 });
             }
         }
@@ -87,7 +87,7 @@ namespace AbstractFactoryFileImplement.Implements
                 Price = rec.Price,
                 ProductAutoParts = source.ProductAutoParts
             .Where(recPC => recPC.ProductId == rec.Id)
-           .ToDictionary(recPC => recPC.AutoPartId, recPC =>
+           .ToDictionary(recPC => recPC.ProductId, recPC =>
             (source.AutoParts.FirstOrDefault(recC => recC.Id ==
            recPC.AutoPartId)?.AutoPartName, recPC.Count))
             })

@@ -10,6 +10,6 @@ namespace AbstractFactoryBusinessLogic.HelperModels
 
         public string Title { get; set; }
 
-        public List<AutoPartViewModel> AutoParts { get; set; }
+        public List<ProductViewModel> Products { get; set; }
     }
 }

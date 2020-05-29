@@ -7,7 +7,11 @@ namespace AbstractFactoryBusinessLogic.BindingModels
     {
         public int? Id { get; set; }
 
+        public int? ClientId { get; set; }
+
         public int ProductId { get; set; }
+
+        public int? ImplementerId { get; set; }
 
         public int Count { get; set; }
 
@@ -22,5 +26,6 @@ namespace AbstractFactoryBusinessLogic.BindingModels
         public DateTime? DateFrom { get; set; }
 
         public DateTime? DateTo { get; set; }
+        public bool? FreeOrders { get; set; }
     }
 }

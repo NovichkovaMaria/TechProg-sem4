@@ -1,6 +1,7 @@
 ﻿using AbstractFactoryBusinessLogic.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace AbstractFactoryBusinessLogic.HelperModels
@@ -11,6 +12,6 @@ namespace AbstractFactoryBusinessLogic.HelperModels
 
         public string Title { get; set; }
 
-        public List<ReportProductAutoPartViewModel> ProductAutoParts { get; set; }
+        public List<IGrouping<DateTime, OrderViewModel>> Orders { get; set; }
     }
 }

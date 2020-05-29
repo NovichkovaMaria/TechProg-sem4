@@ -51,28 +51,29 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
                     ColumnName = "A",
                     RowIndex = 1,
                     Text = info.Title,
-                    StyleIndex = 2U
+                    StyleIndex = 1U
                 });
                 MergeCells(new ExcelMergeParameters
                 {
                     Worksheet = worksheetPart.Worksheet,
                     CellFromName = "A1",
-                    CellToName = "C1"
+                    CellToName = "E1"
                 });
                 uint rowIndex = 2;
-                foreach (var pc in info.ProductAutoParts)
+                foreach (var date in info.Orders)
                 {
+                    decimal dateSum = 0;
                     InsertCellInWorksheet(new ExcelCellParameters
                     {
                         Worksheet = worksheetPart.Worksheet,
                         ShareStringPart = shareStringPart,
                         ColumnName = "A",
                         RowIndex = rowIndex,
-                        Text = pc.AutoPartName,
+                        Text = date.Key.ToShortDateString(),
                         StyleIndex = 0U
                     });
                     rowIndex++;
-                    foreach (var Product in pc.Products)
+                    foreach (var order in date)
                     {
                         InsertCellInWorksheet(new ExcelCellParameters
                         {
@@ -80,7 +81,7 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
                             ShareStringPart = shareStringPart,
                             ColumnName = "B",
                             RowIndex = rowIndex,
-                            Text = Product.Item1,
+                            Text = order.ProductName,
                             StyleIndex = 1U
                         });
                         InsertCellInWorksheet(new ExcelCellParameters
@@ -89,18 +90,28 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
                             ShareStringPart = shareStringPart,
                             ColumnName = "C",
                             RowIndex = rowIndex,
-                            Text = Product.Item2.ToString(),
+                            Text = order.Sum.ToString(),
                             StyleIndex = 1U
                         });
+                        dateSum += order.Sum;
                         rowIndex++;
                     }
                     InsertCellInWorksheet(new ExcelCellParameters
                     {
                         Worksheet = worksheetPart.Worksheet,
                         ShareStringPart = shareStringPart,
+                        ColumnName = "A",
+                        RowIndex = rowIndex,
+                        Text = "Итого",
+                        StyleIndex = 0U
+                    });
+                    InsertCellInWorksheet(new ExcelCellParameters
+                    {
+                        Worksheet = worksheetPart.Worksheet,
+                        ShareStringPart = shareStringPart,
                         ColumnName = "C",
                         RowIndex = rowIndex,
-                        Text = pc.TotalCount.ToString(),
+                        Text = dateSum.ToString(),
                         StyleIndex = 0U
                     });
                     rowIndex++;
@@ -108,6 +119,10 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
                 workbookpart.Workbook.Save();
             }
         }
+        /// <summary>
+        /// Настройка стилей для файла
+        /// </summary>
+        /// <param name="workbookpart"></param>
         private static void CreateStyles(WorkbookPart workbookpart)
         {
             WorkbookStylesPart sp = workbookpart.AddNewPart<WorkbookStylesPart>();
@@ -239,7 +254,7 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
            VerticalAlignmentValues.Center,
                     WrapText = true,
                     Horizontal =
-           HorizontalAlignmentValues.Center
+    HorizontalAlignmentValues.Center
                 },
                 ApplyFont = true
             };
@@ -304,6 +319,14 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
             sp.Stylesheet.Append(tableStyles);
             sp.Stylesheet.Append(stylesheetExtensionList);
         }
+        /// <summary>
+        /// Добааляем новую ячейку в лист
+        /// </summary>
+        /// <param name="worksheet"></param>
+        /// <param name="columnName"></param>
+        /// <param name="rowIndex"></param>
+        /// <param name="index"></param>
+        /// <returns></returns>
         private static void InsertCellInWorksheet(ExcelCellParameters cellParameters)
         {
             SheetData sheetData = cellParameters.Worksheet.GetFirstChild<SheetData>();
@@ -359,6 +382,12 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
             cell.DataType = new EnumValue<CellValues>(CellValues.SharedString);
             cell.StyleIndex = cellParameters.StyleIndex;
         }
+        /// <summary>
+        /// Объединение ячеек
+        /// </summary>
+        /// <param name="worksheet"></param>
+        /// <param name="cell1Name"></param>
+        /// <param name="cell2Name"></param>
         private static void MergeCells(ExcelMergeParameters mergeParameters)
         {
             MergeCells mergeCells;

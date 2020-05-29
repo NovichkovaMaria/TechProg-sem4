@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 using AbstractFactoryBusinessLogic.ViewModels;
-
 namespace AbstractFactoryBusinessLogic.HelperModels
 {
     class PdfInfo
@@ -11,10 +10,6 @@ namespace AbstractFactoryBusinessLogic.HelperModels
 
         public string Title { get; set; }
 
-        public DateTime DateFrom { get; set; }
-
-        public DateTime DateTo { get; set; }
-
-        public List<ReportOrdersViewModel> Orders { get; set; }
+       public List<ReportProductAutoPartViewModel> ProductAutoParts { get; set; }
     }
 }

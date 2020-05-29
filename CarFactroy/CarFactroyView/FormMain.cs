@@ -20,14 +20,17 @@ namespace AbstractCarFactoryView
         public new IUnityContainer Container { get; set; }
         private readonly MainLogic logic;
         private readonly IOrderLogic orderLogic;
+        private readonly WorkModeling work;
         private readonly ReportLogic report;
-
-        public FormMain(MainLogic logic, IOrderLogic orderLogic, ReportLogic report)
+        private readonly BackUpAbstractLogic backUpAbstractLogic;
+        public FormMain(MainLogic logic, IOrderLogic orderLogic, WorkModeling work, ReportLogic report, BackUpAbstractLogic backUpAbstractLogic)
         {
             InitializeComponent();
             this.logic = logic;
             this.report = report;
+            this.work = work;
             this.orderLogic = orderLogic;
+            this.backUpAbstractLogic = backUpAbstractLogic;
         }
         private void FormMain_Load(object sender, EventArgs e)
         {
@@ -43,7 +46,10 @@ namespace AbstractCarFactoryView
                     dataGridView.DataSource = list;
                     dataGridView.Columns[0].Visible = false;
                     dataGridView.Columns[1].Visible = false;
-                    dataGridView.Columns[7].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    dataGridView.Columns[2].Visible = false;
+                    dataGridView.Columns[5].Visible = false;
+                    dataGridView.Columns[5].AutoSizeMode =
+                   DataGridViewAutoSizeColumnMode.Fill;
                 }
             }
             catch (Exception ex)
@@ -52,59 +58,31 @@ namespace AbstractCarFactoryView
                MessageBoxIcon.Error);
             }
         }
-        private void КомпонентыToolStripMenuItem_Click(object sender, EventArgs e)
+        private void частиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = Container.Resolve<FormAutoParts>();
             form.ShowDialog();
         }
-        private void ИзделияToolStripMenuItem_Click(object sender, EventArgs e)
+        private void изделияToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = Container.Resolve<FormProducts>();
             form.ShowDialog();
+        }
+        private void исполнителиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = Container.Resolve<FormImplementers>();
+            form.ShowDialog();
+        }
+        private void запускРаботToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            work.DoWork();
+            LoadData();
         }
         private void ButtonCreateOrder_Click(object sender, EventArgs e)
         {
             var form = Container.Resolve<FormCreateOrder>();
             form.ShowDialog();
             LoadData();
-        }
-        private void ButtonTakeOrderInWork_Click(object sender, EventArgs e)
-        {
-            if (dataGridView.SelectedRows.Count == 1)
-            {
-                int id = Convert.ToInt32(dataGridView.SelectedRows[0].Cells[0].Value);
-                try
-                {
-                    logic.TakeOrderInWork(new ChangeStatusBindingModel { OrderId = id });
-                    LoadData();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK,
-                   MessageBoxIcon.Error);
-                }
-            }
-        }
-        private void ButtonOrderReady_Click(object sender, EventArgs e)
-
-        {
-            if (dataGridView.SelectedRows.Count == 1)
-            {
-                int id = Convert.ToInt32(dataGridView.SelectedRows[0].Cells[0].Value);
-                try
-                {
-                    logic.FinishOrder(new ChangeStatusBindingModel
-                    {
-                        OrderId = id
-                    });
-                    LoadData();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK,
-                   MessageBoxIcon.Error);
-                }
-            }
         }
         private void ButtonPayOrder_Click(object sender, EventArgs e)
         {
@@ -127,13 +105,13 @@ namespace AbstractCarFactoryView
         {
             LoadData();
         }
-        private void ComponentsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void списокИзделийToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (var dialog = new SaveFileDialog { Filter = "docx|*.docx" })
             {
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
-                    report.SaveAutoPartsToWordFile(new ReportBindingModel
+                    report.SaveProductsToWordFile(new ReportBindingModel
                     {
                         FileName =
                    dialog.FileName
@@ -143,15 +121,26 @@ namespace AbstractCarFactoryView
                 }
             }
         }
-        private void ComponentProductsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var form = Container.Resolve<FormReportProductAutoParts>();
-            form.ShowDialog();
-        }
-        private void OrdersToolStripMenuItem_Click(object sender, EventArgs e)
+        private void списокЗаказовToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = Container.Resolve<FormReportOrders>();
             form.ShowDialog();
         }
+        private void изделияПоЧастямToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = Container.Resolve<FormReportProductAutoParts>();
+            form.ShowDialog();
+        }
+        private void клиентыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = Container.Resolve<FormClients>();
+            form.ShowDialog();
+        }
+        private void сообщенияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = Container.Resolve<FormMessages>();
+            form.ShowDialog();
+        }
     }
 }
+
