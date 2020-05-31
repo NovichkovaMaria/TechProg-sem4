@@ -1,4 +1,4 @@
-﻿namespace AbstractCarFactoryView
+﻿namespace AbstractFactoryClientView
 {
     partial class FormMessages
     {
@@ -21,6 +21,7 @@
         }
 
         #region Windows Form Designer generated code
+
         /// <summary>
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
@@ -34,20 +35,17 @@
             // dataGridView
             // 
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(26, 13);
-            this.dataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView.Location = new System.Drawing.Point(12, 12);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.RowHeadersWidth = 51;
-            this.dataGridView.Size = new System.Drawing.Size(1817, 503);
+            this.dataGridView.Size = new System.Drawing.Size(776, 426);
             this.dataGridView.TabIndex = 0;
             // 
             // FormMessages
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridView);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormMessages";
             this.Text = "Сообщения";
             this.Load += new System.EventHandler(this.FormMessages_Load);
@@ -55,7 +53,9 @@
             this.ResumeLayout(false);
 
         }
+
         #endregion
+
         private System.Windows.Forms.DataGridView dataGridView;
     }
 }
