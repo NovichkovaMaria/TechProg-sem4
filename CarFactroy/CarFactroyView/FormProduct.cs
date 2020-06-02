@@ -15,7 +15,7 @@ namespace AbstractCarFactoryView
         public int Id { set { id = value; } }
         private readonly IProductLogic logic;
         private int? id;
-        private Dictionary<int, (string, int)> productAutoParts;
+        private Dictionary<int, (string, int)> ProductAutoParts;
         public FormProduct(IProductLogic service)
         {
             InitializeComponent();
@@ -23,20 +23,47 @@ namespace AbstractCarFactoryView
         }
         private void FormProduct_Load(object sender, EventArgs e)
         {
-            LoadData();
+            if (id.HasValue)
+            {
+                try
+                {
+                    ProductViewModel view = logic.Read(new ProductBindingModel { Id = id.Value })?[0];
+                    if (view != null)
+                    {
+                        textBoxName.Text = view.ProductName;
+                        textBoxPrice.Text = view.Price.ToString();
+                        ProductAutoParts = view.ProductAutoParts;
+                        LoadData();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK,
+                   MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                ProductAutoParts = new Dictionary<int, (string, int)>();
+            }
         }
         private void LoadData()
         {
             try
             {
-                Program.ConfigGrid(logic.Read(null), dataGridView);
+                if (ProductAutoParts != null)
+                {
+                    dataGridView.Rows.Clear();
+                    foreach (var sf in ProductAutoParts)
+                    {
+                        dataGridView.Rows.Add(new object[] { sf.Key, sf.Value.Item1, sf.Value.Item2 });
+                    }
+                }
             }
-            
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK,
-    MessageBoxIcon.Error);
+               MessageBoxIcon.Error);
             }
         }
         private void ButtonAdd_Click(object sender, EventArgs e)
@@ -44,13 +71,13 @@ namespace AbstractCarFactoryView
             var form = Container.Resolve<FormProductAutoPart>();
             if (form.ShowDialog() == DialogResult.OK)
             {
-                if (productAutoParts.ContainsKey(form.Id))
+                if (ProductAutoParts.ContainsKey(form.Id))
                 {
-                    productAutoParts[form.Id] = (form.AutoPartName, form.Count);
+                    ProductAutoParts[form.Id] = (form.AutoPartName, form.Count);
                 }
                 else
                 {
-                    productAutoParts.Add(form.Id, (form.AutoPartName, form.Count));
+                    ProductAutoParts.Add(form.Id, (form.AutoPartName, form.Count));
                 }
                 LoadData();
             }
@@ -63,10 +90,10 @@ namespace AbstractCarFactoryView
                 var form = Container.Resolve<FormProductAutoPart>();
                 int id = Convert.ToInt32(dataGridView.SelectedRows[0].Cells[0].Value);
                 form.Id = id;
-                form.Count = productAutoParts[id].Item2;
+                form.Count = ProductAutoParts[id].Item2;
                 if (form.ShowDialog() == DialogResult.OK)
                 {
-                    productAutoParts[form.Id] = (form.AutoPartName, form.Count);
+                    ProductAutoParts[form.Id] = (form.AutoPartName, form.Count);
                     LoadData();
                 }
             }
@@ -80,7 +107,7 @@ namespace AbstractCarFactoryView
                 {
                     try
                     {
-                        productAutoParts.Remove(Convert.ToInt32(dataGridView.SelectedRows[0].Cells[0].Value));
+                        ProductAutoParts.Remove(Convert.ToInt32(dataGridView.SelectedRows[0].Cells[0].Value));
                     }
                     catch (Exception ex)
                     {
@@ -110,7 +137,7 @@ namespace AbstractCarFactoryView
                MessageBoxIcon.Error);
                 return;
             }
-            if (productAutoParts == null || productAutoParts.Count == 0)
+            if (ProductAutoParts == null || ProductAutoParts.Count == 0)
             {
                 MessageBox.Show("Заполните компоненты", "Ошибка", MessageBoxButtons.OK,
                MessageBoxIcon.Error);
@@ -123,7 +150,7 @@ namespace AbstractCarFactoryView
                     Id = id,
                     ProductName = textBoxName.Text,
                     Price = Convert.ToDecimal(textBoxPrice.Text),
-                    ProductAutoParts = productAutoParts
+                    ProductAutoParts = ProductAutoParts
                 });
                 MessageBox.Show("Сохранение прошло успешно", "Сообщение",
                MessageBoxButtons.OK, MessageBoxIcon.Information);
