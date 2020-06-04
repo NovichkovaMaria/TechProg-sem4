@@ -133,13 +133,7 @@ namespace AbstractCarFactoryView
         {
             var form = Container.Resolve<FormClients>();
             form.ShowDialog();
-        }
-        private void сообщенияToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var form = Container.Resolve<FormMessages>();
-            form.ShowDialog();
-
-        }
+        }      
     }
 }
 

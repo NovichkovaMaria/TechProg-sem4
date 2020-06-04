@@ -10,6 +10,6 @@ namespace AbstractFactoryDatabaseImplement.Models
         [Required]
         public string AutoPartName { get; set; }
         [ForeignKey("AutoPartId")]
-        public virtual List<ProductAutoPart> ProductAutoParts { get; set; }
+        public virtual List<ProductAutoPart> ProductAutoParts { get; set; }
     }
 }
