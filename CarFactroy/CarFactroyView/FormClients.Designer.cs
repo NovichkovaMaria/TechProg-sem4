@@ -37,19 +37,16 @@
             // dataGridView
             // 
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(16, 15);
-            this.dataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView.Location = new System.Drawing.Point(12, 12);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.RowHeadersWidth = 51;
-            this.dataGridView.Size = new System.Drawing.Size(525, 524);
+            this.dataGridView.Size = new System.Drawing.Size(394, 426);
             this.dataGridView.TabIndex = 0;
             // 
             // buttonDel
             // 
-            this.buttonDel.Location = new System.Drawing.Point(549, 15);
-            this.buttonDel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonDel.Location = new System.Drawing.Point(412, 12);
             this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(145, 49);
+            this.buttonDel.Size = new System.Drawing.Size(109, 23);
             this.buttonDel.TabIndex = 1;
             this.buttonDel.Text = "Удалить";
             this.buttonDel.UseVisualStyleBackColor = true;
@@ -57,10 +54,9 @@
             // 
             // buttonRef
             // 
-            this.buttonRef.Location = new System.Drawing.Point(549, 72);
-            this.buttonRef.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonRef.Location = new System.Drawing.Point(412, 41);
             this.buttonRef.Name = "buttonRef";
-            this.buttonRef.Size = new System.Drawing.Size(145, 44);
+            this.buttonRef.Size = new System.Drawing.Size(109, 23);
             this.buttonRef.TabIndex = 2;
             this.buttonRef.Text = "Обновить";
             this.buttonRef.UseVisualStyleBackColor = true;
@@ -68,13 +64,12 @@
             // 
             // FormClients
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(703, 554);
+            this.ClientSize = new System.Drawing.Size(527, 450);
             this.Controls.Add(this.buttonRef);
             this.Controls.Add(this.buttonDel);
             this.Controls.Add(this.dataGridView);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormClients";
             this.Text = "Клиенты";
             this.Load += new System.EventHandler(this.FormClients_Load);

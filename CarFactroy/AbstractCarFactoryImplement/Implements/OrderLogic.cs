@@ -66,9 +66,7 @@ namespace AbstractFactoryListImplement.Implements
                 if (model != null)
                 {
                     if (order.Id == model.Id || (model.DateFrom.HasValue && model.DateTo.HasValue && order.DateCreate >= model.DateFrom && order.DateCreate <= model.DateTo)
-                         || model.ClientId.HasValue && order.ClientId == model.ClientId
-                         || model.FreeOrders.HasValue && model.FreeOrders.Value
-                     || model.ImplementerId.HasValue && order.ImplementerId == model.ImplementerId && order.Status == OrderStatus.Выполняется)
+                        || model.ClientId.HasValue && order.ClientId == model.ClientId)
                     {
                         result.Add(CreateViewModel(order));
                         break;
@@ -84,7 +82,6 @@ namespace AbstractFactoryListImplement.Implements
             order.ProductId = model.ProductId == 0 ? order.ProductId : model.ProductId;
             order.ClientId = (int)model.ClientId;
             order.Count = model.Count;
-            order.ImplementerId = model.ImplementerId;
             order.Sum = model.Sum;
             order.Status = model.Status;
             order.DateCreate = model.DateCreate;

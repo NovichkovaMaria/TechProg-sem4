@@ -18,7 +18,6 @@ namespace AbstractFactoryDatabaseImplement
         public virtual DbSet<Product> Products { set; get; }
         public virtual DbSet<ProductAutoPart> ProductAutoParts { set; get; }
         public virtual DbSet<Order> Orders { set; get; }
-        public virtual DbSet<Client> Clients { set; get; }
-        public virtual DbSet<Implementer> Implementers { set; get; }
+        public virtual DbSet<Client> Clients { set; get; } 
     }
 }
