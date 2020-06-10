@@ -10,7 +10,6 @@ namespace AbstractFactoryListImplement
         public List<Order> Orders { get; set; }
         public List<Product> Products { get; set; }
         public List<ProductAutoPart> ProductAutoParts { get; set; }
-
         private DataListSingleton()
         {
             AutoParts = new List<AutoPart>();
@@ -18,7 +17,6 @@ namespace AbstractFactoryListImplement
             Products = new List<Product>();
             ProductAutoParts = new List<ProductAutoPart>();
         }
-
         public static DataListSingleton GetInstance()
         {
             if (instance == null)
@@ -27,5 +25,5 @@ namespace AbstractFactoryListImplement
             }
             return instance;
         }
-    }
+    }
 }

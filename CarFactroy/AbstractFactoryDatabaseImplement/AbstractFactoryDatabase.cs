@@ -1,7 +1,6 @@
 ﻿using AbstractFactoryDatabaseImplement.Models;
 using Microsoft.EntityFrameworkCore;
 
-
 namespace AbstractFactoryDatabaseImplement
 {
     public class AbstractFactoryDatabase : DbContext
@@ -14,7 +13,6 @@ namespace AbstractFactoryDatabaseImplement
             }
             base.OnConfiguring(optionsBuilder);
         }
-
         public virtual DbSet<AutoPart> AutoParts { set; get; }
         public virtual DbSet<Product> Products { set; get; }
         public virtual DbSet<ProductAutoPart> ProductAutoParts { set; get; }

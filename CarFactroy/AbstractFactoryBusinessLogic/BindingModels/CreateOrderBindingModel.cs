@@ -3,7 +3,6 @@ using AbstractFactoryBusinessLogic.Enums;
 
 namespace AbstractFactoryBusinessLogic.BindingModels
 {
-    // Данные от клиента, для создания заказа
     public class CreateOrderBindingModel
     {
         public int ProductId { get; set; }

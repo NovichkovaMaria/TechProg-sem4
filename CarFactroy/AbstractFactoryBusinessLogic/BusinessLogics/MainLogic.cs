@@ -3,11 +3,10 @@ using AbstractFactoryBusinessLogic.BindingModels;
 using AbstractFactoryBusinessLogic.Enums;
 using AbstractFactoryBusinessLogic.Interfaces;
 
-
 namespace AbstractFactoryBusinessLogic.BusinessLogics
 {
    public  class MainLogic
-    {
+   {
         private readonly IOrderLogic orderLogic;
         public MainLogic(IOrderLogic orderLogic)
         {
@@ -50,7 +49,6 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
             });
         }
         public void FinishOrder(ChangeStatusBindingModel model)
-
         {
             var order = orderLogic.Read(new OrderBindingModel
             {
@@ -100,5 +98,5 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
                 Status = OrderStatus.Оплачен
             });
         }
-    }
+   }
 }

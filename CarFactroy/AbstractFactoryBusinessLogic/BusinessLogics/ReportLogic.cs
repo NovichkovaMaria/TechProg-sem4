@@ -21,7 +21,6 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
             this.AutoPartLogic = AutoPartLogic;
             this.orderLogic = orderLLogic;
         }
-
         public List<ReportProductAutoPartViewModel> GetProductAutoPart()
         {
             var AutoParts = AutoPartLogic.Read(null);

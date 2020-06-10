@@ -87,19 +87,19 @@ namespace AbstractFactoryListImplement.Implements
         }
         private OrderViewModel CreateViewModel(Order Order)
         {
-            string BouquetName = "";
+            string ProductName = "";
             for (int j = 0; j < source.Products.Count; ++j)
             {
                 if (source.Products[j].Id == Order.ProductId)
                 {
-                    BouquetName = source.Products[j].ProductName;
+                    ProductName = source.Products[j].ProductName;
                     break;
                 }
             }
             return new OrderViewModel
             {
                 Id = Order.Id,
-                ProductName = BouquetName,
+                ProductName = ProductName,
                 Count = Order.Count,
                 Sum = Order.Sum,
                 Status = Order.Status,

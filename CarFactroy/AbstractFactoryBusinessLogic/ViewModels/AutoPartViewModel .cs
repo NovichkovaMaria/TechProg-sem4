@@ -2,7 +2,6 @@
 
 namespace AbstractFactoryBusinessLogic.ViewModels
 {
-    // Компонент, требуемый для изготовления изделия
     public class AutoPartViewModel
     {
         public int Id { get; set; }

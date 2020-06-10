@@ -54,7 +54,6 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
             properties.AppendChild(pageSize);
             return properties;
         }
-
         private static Paragraph CreateParagraph(WordParagraph paragraph)
         {
             if (paragraph != null)
@@ -86,7 +85,6 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
             }
             return null;
         }
-
         private static ParagraphProperties
        CreateParagraphProperties(WordParagraphProperties paragraphProperties)
         {
