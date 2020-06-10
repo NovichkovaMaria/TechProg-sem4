@@ -5,8 +5,6 @@ using System.Text;
 
 namespace AbstractFactoryBusinessLogic.ViewModels
 {
-    // Изделие, изготавливаемое в магазине   
-
     public class ProductViewModel
     {
         public int Id { get; set; }

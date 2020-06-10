@@ -56,7 +56,6 @@ namespace AbstractFactoryDatabaseImplement.Implements
                 }
             }
         }
-
         public List<OrderViewModel> Read(OrderBindingModel model)
         {
             using (var context = new AbstractFactoryDatabase())

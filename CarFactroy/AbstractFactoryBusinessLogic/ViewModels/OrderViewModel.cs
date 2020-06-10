@@ -3,8 +3,7 @@ using System;
 using System.ComponentModel;
 
 namespace AbstractFactoryBusinessLogic.ViewModels
-{
-    // Заказ    
+{  
     public class OrderViewModel
     {
         public int Id { get; set; }

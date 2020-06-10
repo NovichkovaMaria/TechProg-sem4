@@ -46,11 +46,9 @@ namespace AbstractFactoryDatabaseImplement.Implements
                         {
                             var productAutoParts = context.ProductAutoParts.Where(rec
                            => rec.ProductId == model.Id.Value).ToList();
-                            // удалили те, которых нет в модели
                             context.ProductAutoParts.RemoveRange(productAutoParts.Where(rec =>
                             !model.ProductAutoParts.ContainsKey(rec.AutoPartId)).ToList());
                             context.SaveChanges();
-                            // обновили количество у существующих записей
                             foreach (var updateAutoPart in productAutoParts)
                             {
                                 updateAutoPart.Count =
@@ -60,7 +58,6 @@ namespace AbstractFactoryDatabaseImplement.Implements
                             }
                             context.SaveChanges();
                         }
-                        // добавили новые
                         foreach (var pc in model.ProductAutoParts)
                         {
                             context.ProductAutoParts.Add(new ProductAutoPart
@@ -89,7 +86,6 @@ namespace AbstractFactoryDatabaseImplement.Implements
                 {
                     try
                     {
-                        // удаяем записи по компонентам при удалении изделия
                         context.ProductAutoParts.RemoveRange(context.ProductAutoParts.Where(rec =>
                         rec.ProductId == model.Id));
                         Product element = context.Products.FirstOrDefault(rec => rec.Id
