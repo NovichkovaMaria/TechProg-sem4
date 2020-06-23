@@ -6,7 +6,6 @@ using System.Text;
 
 namespace AbstractFactoryBusinessLogic.ViewModels
 { 
-
     [DataContract]
     public class ProductViewModel
     {
