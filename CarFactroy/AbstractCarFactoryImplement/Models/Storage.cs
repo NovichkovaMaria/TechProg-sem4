@@ -4,9 +4,9 @@ using System.Text;
 
 namespace AbstractFactoryListImplement.Models
 {
-    public class AutoPart
+    public class Storage
     {
         public int Id { get; set; }
-        public string AutoPartName { get; set; }
+        public string StorageName { get; set; }
     }
 }

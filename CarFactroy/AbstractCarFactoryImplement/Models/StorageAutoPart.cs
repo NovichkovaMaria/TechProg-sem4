@@ -4,9 +4,11 @@ using System.Text;
 
 namespace AbstractFactoryListImplement.Models
 {
-    public class AutoPart
+    public class StorageAutoPart
     {
         public int Id { get; set; }
-        public string AutoPartName { get; set; }
+        public int StorageId { get; set; }
+        public int AutoPartId { get; set; }
+        public int Count { get; set; }
     }
 }

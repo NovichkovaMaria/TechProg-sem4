@@ -3,7 +3,6 @@ using AbstractFactoryBusinessLogic.Enums;
 
 namespace AbstractFactoryListImplement.Models
 {
-    // Заказ
     public class Order
     {
         public int Id { get; set; }
@@ -13,5 +12,5 @@ namespace AbstractFactoryListImplement.Models
         public OrderStatus Status { get; set; }
         public DateTime DateCreate { get; set; }
         public DateTime? DateImplement { get; set; }
-    }
+    }
 }

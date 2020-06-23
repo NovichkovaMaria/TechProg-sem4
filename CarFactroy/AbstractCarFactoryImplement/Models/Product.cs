@@ -4,7 +4,6 @@ using System.Text;
 
 namespace AbstractFactoryListImplement.Models
 {
-    // Изделие, изготавливаемое на автозаводе
     public class Product
     {
         public int Id { get; set; }
