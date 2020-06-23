@@ -5,7 +5,6 @@ using System.Net.Http.Headers;
 using System.Text;
 using Newtonsoft.Json;
 
-
 namespace AbstractFactoryClientView
 {
     public static class APIClient

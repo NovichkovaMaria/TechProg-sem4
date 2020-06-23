@@ -95,7 +95,6 @@ namespace AbstractCarFactoryView
         {
             LoadData();
         }
-
         private void ButtonSave_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(textBoxName.Text))

@@ -40,15 +40,12 @@ namespace AbstractCarFactoryView
                     decimal sum = 0;
                     foreach (var date in dict)
                     {
-                       // decimal sum = 0;
                         dataGridView.Rows.Add(new object[] { date.Key.ToShortDateString(), "", "" });
                         foreach (var order in date)
                         {
                             dataGridView.Rows.Add(new object[] { "", order.ProductName, order.Count });
                             sum += order.Count;
                         }
-                       // dataGridView.Rows.Add(new object[] { "Итого", "", sum });
-                       // dataGridView.Rows.Add(new object[] { });
                     }
                     dataGridView.Rows.Add(new object[] { "Всего", "", sum });
                 }
@@ -58,7 +55,6 @@ namespace AbstractCarFactoryView
                 MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-    
         private void buttonSaveToExcel_Click(object sender, EventArgs e)
         {
             using (var dialog = new SaveFileDialog { Filter = "xlsx|*.xlsx" })

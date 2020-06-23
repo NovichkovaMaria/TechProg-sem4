@@ -6,7 +6,6 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -19,9 +18,7 @@
             }
             base.Dispose(disposing);
         }
-
         #region Windows Form Designer generated code
-
         /// <summary>
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
@@ -74,11 +71,8 @@
             this.Text = "Отчет по мебели с заготовками";
             this.Load += new System.EventHandler(this.FormReportProductAutoParts_Load);
             this.ResumeLayout(false);
-
         }
-
         #endregion
-
         private System.Windows.Forms.Button buttonMake;
         private System.Windows.Forms.Button buttonToPdf;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer;

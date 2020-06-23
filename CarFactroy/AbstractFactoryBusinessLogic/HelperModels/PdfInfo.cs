@@ -7,9 +7,7 @@ namespace AbstractFactoryBusinessLogic.HelperModels
     class PdfInfo
     {
         public string FileName { get; set; }
-
         public string Title { get; set; }
-
-       public List<ReportProductAutoPartViewModel> ProductAutoParts { get; set; }
+        public List<ReportProductAutoPartViewModel> ProductAutoParts { get; set; }
     }
 }

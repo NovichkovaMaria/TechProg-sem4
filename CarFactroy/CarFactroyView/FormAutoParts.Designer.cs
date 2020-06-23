@@ -97,11 +97,10 @@
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.dataGridView);
             this.Name = "FormAutoParts";
-            this.Text = "Компоненты";
+            this.Text = "Части";
             this.Load += new System.EventHandler(this.FormComponents_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         #endregion

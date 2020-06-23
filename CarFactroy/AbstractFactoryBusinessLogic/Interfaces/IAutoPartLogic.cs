@@ -7,9 +7,7 @@ namespace AbstractFactoryBusinessLogic.Interfaces
     public interface IAutoPartLogic
     {
         List<AutoPartViewModel> Read(AutoPartBindingModel model);
-
         void CreateOrUpdate(AutoPartBindingModel model);
-
         void Delete(AutoPartBindingModel model);
     }
 }

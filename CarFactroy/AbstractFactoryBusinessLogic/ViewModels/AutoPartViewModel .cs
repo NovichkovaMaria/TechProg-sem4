@@ -4,7 +4,6 @@ using System.ComponentModel;
 
 namespace AbstractFactoryBusinessLogic.ViewModels
 {
-    // Компонент, требуемый для изготовления изделия
     public class AutoPartViewModel : BaseViewModel
     {
         [Column(title: "Часть", gridViewAutoSize: GridViewAutoSize.Fill)]

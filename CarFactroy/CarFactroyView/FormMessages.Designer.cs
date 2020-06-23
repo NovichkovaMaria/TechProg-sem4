@@ -33,18 +33,18 @@
             // dataGridView
             // 
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(26, 13);
+            this.dataGridView.Location = new System.Drawing.Point(13, 13);
             this.dataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowHeadersWidth = 51;
-            this.dataGridView.Size = new System.Drawing.Size(1817, 503);
+            this.dataGridView.Size = new System.Drawing.Size(1413, 503);
             this.dataGridView.TabIndex = 0;
             // 
             // FormMessages
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 554);
+            this.ClientSize = new System.Drawing.Size(1464, 554);
             this.Controls.Add(this.dataGridView);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormMessages";

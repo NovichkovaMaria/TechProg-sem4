@@ -32,7 +32,6 @@ namespace AbstractFactoryFileImplement.Implements
         public void Delete(ImplementerBindingModel model)
         {
             Implementer element = source.Implementers.FirstOrDefault(rec => rec.Id == model.Id);
-
             if (element != null)
             {
                 source.Implementers.Remove(element);

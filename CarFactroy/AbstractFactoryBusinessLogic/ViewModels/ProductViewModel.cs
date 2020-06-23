@@ -7,7 +7,6 @@ using AbstractFactoryBusinessLogic.Attributes;
 
 namespace AbstractFactoryBusinessLogic.ViewModels
 { 
-
     [DataContract]
     public class ProductViewModel : BaseViewModel
     {

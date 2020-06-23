@@ -5,9 +5,6 @@ using System.Runtime.Serialization;
 
 namespace AbstractFactoryBusinessLogic.ViewModels
 {
-    /// <summary>
-    /// Базовый класс для View-моделей
-    /// </summary>
     [DataContract]
     public abstract class BaseViewModel
     {

@@ -21,7 +21,6 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
             this.AutoPartLogic = AutoPartLogic;
             this.orderLogic = orderLogic;
         }
-
         public List<ReportProductAutoPartViewModel> GetProductAutoPart()
         {
             var Products = ProductLogic.Read(null);
@@ -52,7 +51,6 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
             .GroupBy(rec => rec.DateCreate.Date)
             .OrderBy(recG => recG.Key)
             .ToList();
-
             return list;
         }
         public void SaveProductsToWordFile(ReportBindingModel model)

@@ -15,7 +15,7 @@ namespace AbstractCarFactoryView
         public FormReportProductAutoParts(ReportLogic logic)
         {
             InitializeComponent();
-        this.logic = logic;
+            this.logic = logic;
         }
         private void buttonMake_Click(object sender, EventArgs e)
         {
@@ -32,7 +32,6 @@ namespace AbstractCarFactoryView
                MessageBoxIcon.Error);
             }
         }
-
         private void buttonToPdf_Click(object sender, EventArgs e)
         {
             using (var dialog = new SaveFileDialog { Filter = "pdf|*.pdf" })
@@ -54,10 +53,8 @@ namespace AbstractCarFactoryView
                 }
             }
         }
-
         private void FormReportProductAutoParts_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

@@ -24,7 +24,6 @@ namespace AbstractFactoryClientView
             try
             {
                 var list = APIClient.GetRequest<List<MessageInfoViewModel>>($"api/client/getmessages?clientId={Program.Client.Id}");
-
                 if (list != null)
                 {
                     dataGridView.DataSource = list;
