@@ -6,8 +6,8 @@ using AbstractFactoryBusinessLogic.Interfaces;
 
 namespace AbstractFactoryBusinessLogic.BusinessLogics
 {
-    public class MainLogic
-    {
+   public  class MainLogic
+   {
         private readonly IOrderLogic orderLogic;
         public MainLogic(IOrderLogic orderLogic)
         {
