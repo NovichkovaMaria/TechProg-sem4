@@ -53,8 +53,5 @@ namespace AbstractCarFactoryView
                 }
             }
         }
-        private void FormReportProductAutoParts_Load(object sender, EventArgs e)
-        {
-        }
     }
 }
