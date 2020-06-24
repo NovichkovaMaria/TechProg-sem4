@@ -34,9 +34,7 @@
             // 
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Location = new System.Drawing.Point(13, 13);
-            this.dataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.RowHeadersWidth = 51;
             this.dataGridView.Size = new System.Drawing.Size(1413, 503);
             this.dataGridView.TabIndex = 0;
             // 
@@ -52,7 +50,6 @@
             this.Load += new System.EventHandler(this.FormMessages_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
-
         }
         #endregion
         private System.Windows.Forms.DataGridView dataGridView;

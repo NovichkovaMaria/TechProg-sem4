@@ -41,7 +41,7 @@ namespace AbstractFactoryClientView
                 {
                     int id = Convert.ToInt32(comboBoxProduct.SelectedValue);
                     ProductViewModel Product =
-APIClient.GetRequest<ProductViewModel>($"api/main/getProduct?ProductId={id}");
+                    APIClient.GetRequest<ProductViewModel>($"api/main/getProduct?ProductId={id}");
                     int count = Convert.ToInt32(textBoxCount.Text);
                     textBoxSum.Text = (count * Product.Price).ToString();
                 }

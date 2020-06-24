@@ -47,8 +47,7 @@ namespace AbstractCarFactoryView
                 MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK,
                MessageBoxIcon.Error);
             }
-        }
-    
+        } 
         private void частиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = Container.Resolve<FormAutoParts>();
@@ -155,4 +154,3 @@ namespace AbstractCarFactoryView
         }
     }
 }
-

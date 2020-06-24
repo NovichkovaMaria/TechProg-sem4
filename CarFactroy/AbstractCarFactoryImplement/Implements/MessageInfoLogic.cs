@@ -61,7 +61,6 @@ namespace AbstractFactoryListImplement.Implements
             MessageInfo.DateDelivery = model.DateDelivery;
             MessageInfo.Subject = model.Subject;
             MessageInfo.Body = model.Body;
-
             return MessageInfo;
         }
         private MessageInfoViewModel CreateViewModel(MessageInfo MessageInfo)

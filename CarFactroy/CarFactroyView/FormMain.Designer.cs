@@ -103,6 +103,7 @@
             this.исполнителиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.исполнителиToolStripMenuItem.Text = "Исполнители";
             this.исполнителиToolStripMenuItem.Click += new System.EventHandler(this.исполнителиToolStripMenuItem_Click);
+            //
             // сообщенияToolStripMenuItem
             // 
             this.сообщенияToolStripMenuItem.Name = "сообщенияToolStripMenuItem";
@@ -223,7 +224,9 @@
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
         #endregion
+
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem Справочники;
         private System.Windows.Forms.ToolStripMenuItem частиToolStripMenuItem;

@@ -14,7 +14,7 @@ namespace AbstractFactoryBusinessLogic.ViewModels
         public int WorkingTime { get; set; }
         [Column(title: "Время на перерыв", width: 100)]
         public int PauseTime { get; set; }
-        public override List<string> Properties() => new List<string>
+       public override List<string> Properties() => new List<string>
         {
             "Id",
             "ImplementerFIO",

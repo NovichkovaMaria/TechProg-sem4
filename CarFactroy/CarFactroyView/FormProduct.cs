@@ -31,12 +31,12 @@ namespace AbstractCarFactoryView
             {
                 Program.ConfigGrid(logic.Read(null), dataGridView);
             }
-            
+
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK,
-    MessageBoxIcon.Error);
+                 MessageBoxIcon.Error);
             }
         }
         private void ButtonAdd_Click(object sender, EventArgs e)
@@ -55,7 +55,6 @@ namespace AbstractCarFactoryView
                 LoadData();
             }
         }
-
         private void ButtonUpd_Click(object sender, EventArgs e)
         {
             if (dataGridView.SelectedRows.Count == 1)

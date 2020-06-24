@@ -15,4 +15,3 @@ namespace AbstractFactoryBusinessLogic.ViewModels
         public OrderStatus Status { get; set; }
     }
 }
-

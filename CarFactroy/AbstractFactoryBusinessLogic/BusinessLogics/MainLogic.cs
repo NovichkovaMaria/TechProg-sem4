@@ -32,7 +32,7 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
                 MailAddress = clientLogic.Read(new ClientBindingModel
                 {
                     Id =
-           model.ClientId
+                 model.ClientId
                 })?[0]?.Email,
                 Subject = $"Новый заказ",
                 Text = $"Заказ принят."
@@ -113,7 +113,7 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
                 MailAddress = clientLogic.Read(new ClientBindingModel
                 {
                     Id =
-           order.ClientId
+                order.ClientId
                 })?[0]?.Email,
                 Subject = $"Заказ №{order.Id}",
                 Text = $"Заказ №{order.Id} готов."

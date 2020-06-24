@@ -31,6 +31,6 @@ namespace AbstractFactoryBusinessLogic.ViewModels
             "DateDelivery",
             "Subject",
             "Body"
-        };
+        }; 
     }
 }

@@ -2,7 +2,6 @@
 using AbstractFactoryBusinessLogic.BindingModels;
 using AbstractFactoryBusinessLogic.ViewModels;
 
-
 namespace AbstractFactoryBusinessLogic.Interfaces
 {
     public interface IProductLogic

@@ -246,10 +246,10 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
                 Alignment = new Alignment()
                 {
                     Vertical =
-           VerticalAlignmentValues.Center,
+                    VerticalAlignmentValues.Center,
                     WrapText = true,
                     Horizontal =
-    HorizontalAlignmentValues.Center
+                    HorizontalAlignmentValues.Center
                 },
                 ApplyFont = true
             };
@@ -330,7 +330,7 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
            cellParameters.RowIndex).Count() != 0)
             {
                 row = sheetData.Elements<Row>().Where(r => r.RowIndex ==
-    cellParameters.RowIndex).First();
+                cellParameters.RowIndex).First();
             }
             else
             {
