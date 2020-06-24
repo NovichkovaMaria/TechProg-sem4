@@ -17,10 +17,3 @@ namespace AbstractFactoryDatabaseImplement.Models
         public virtual List<Order> Orders { get; set; }
     }
 }
-
-
-
-
-
-
-

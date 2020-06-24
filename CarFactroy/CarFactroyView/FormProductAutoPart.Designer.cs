@@ -104,7 +104,6 @@
             this.Text = "Часть сборки автомобиля";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

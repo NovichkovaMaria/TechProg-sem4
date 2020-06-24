@@ -21,7 +21,7 @@ namespace AbstractFactoryFileImplement.Implements
            == model.AutoPartName && rec.Id != model.Id);
             if (element != null)
             {
-                throw new Exception("Уже есть цветок с таким названием");
+                throw new Exception("Уже есть часть с таким названием");
             }
             if (model.Id.HasValue)
             {

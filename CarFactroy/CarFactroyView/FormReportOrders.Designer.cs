@@ -115,7 +115,6 @@
             this.Text = "FormReportOrders";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
