@@ -4,7 +4,8 @@ using AbstractFactoryBusinessLogic.ViewModels;
 using AbstractFactoryFileImplement.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Linq;
+
 
 namespace AbstractFactoryFileImplement.Implements
 {
@@ -21,7 +22,7 @@ namespace AbstractFactoryFileImplement.Implements
            == model.AutoPartName && rec.Id != model.Id);
             if (element != null)
             {
-                throw new Exception("Уже есть цветок с таким названием");
+                throw new Exception("Уже есть часть с таким названием");
             }
             if (model.Id.HasValue)
             {

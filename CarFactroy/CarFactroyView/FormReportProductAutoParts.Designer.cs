@@ -71,7 +71,7 @@
             this.Controls.Add(this.buttonToPdf);
             this.Controls.Add(this.buttonMake);
             this.Name = "FormReportProductAutoParts";
-            this.Text = "Отчет по мебели с заготовками";
+            this.Text = "Отчет по частям с изделиями";
             this.Load += new System.EventHandler(this.FormReportProductAutoParts_Load);
             this.ResumeLayout(false);
 

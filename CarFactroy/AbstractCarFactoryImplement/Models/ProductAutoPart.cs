@@ -4,7 +4,6 @@ using System.Text;
 
 namespace AbstractFactoryListImplement.Models
 {
-    // Сколько компонентов, требуется при изготовлении изделия
     public class ProductAutoPart
     {
         public int Id { get; set; }
