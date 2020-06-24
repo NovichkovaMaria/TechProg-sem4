@@ -109,7 +109,7 @@
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "Компонент";
+            this.Column2.HeaderText = "Изделие";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.Width = 200;
@@ -136,7 +136,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportOrdersViewModelBindingSource)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         #endregion

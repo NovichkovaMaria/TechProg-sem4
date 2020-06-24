@@ -91,7 +91,7 @@
             this.groupBox1.Size = new System.Drawing.Size(770, 384);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Части для сборки";
+            this.groupBox1.Text = "Изделия";
             // 
             // buttonRef
             // 
@@ -145,6 +145,7 @@
             this.dataGridView.Location = new System.Drawing.Point(19, 21);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowHeadersVisible = false;
+            this.dataGridView.RowHeadersWidth = 51;
             this.dataGridView.RowTemplate.Height = 24;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView.Size = new System.Drawing.Size(502, 329);
@@ -173,18 +174,22 @@
             // Column3
             // 
             this.Column3.HeaderText = "ID";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.Visible = false;
+            this.Column3.Width = 125;
             // 
             // Column1
             // 
-            this.Column1.HeaderText = "Компонент";
+            this.Column1.HeaderText = "Изделие";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.Width = 300;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Количество";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.Width = 200;
             // 
@@ -207,7 +212,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

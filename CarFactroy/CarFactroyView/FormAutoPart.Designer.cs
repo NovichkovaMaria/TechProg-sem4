@@ -83,7 +83,6 @@
             this.Text = "Часть для сборки";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

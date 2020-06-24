@@ -101,7 +101,6 @@
             this.Load += new System.EventHandler(this.buttonRef_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         #endregion

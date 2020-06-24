@@ -64,17 +64,15 @@
             // 
             // FormReportProductAutoParts
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1083, 502);
+            this.ClientSize = new System.Drawing.Size(687, 347);
             this.Controls.Add(this.reportViewer);
             this.Controls.Add(this.buttonToPdf);
             this.Controls.Add(this.buttonMake);
             this.Name = "FormReportProductAutoParts";
-            this.Text = "Отчет по мебели с заготовками";
-            this.Load += new System.EventHandler(this.FormReportProductAutoParts_Load);
+            this.Text = "Отчет по частям с изделиями";
             this.ResumeLayout(false);
-
         }
 
         #endregion

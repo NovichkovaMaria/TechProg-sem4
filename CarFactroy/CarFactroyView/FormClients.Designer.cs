@@ -80,7 +80,6 @@
             this.Load += new System.EventHandler(this.FormClients_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         #endregion

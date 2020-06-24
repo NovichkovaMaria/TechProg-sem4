@@ -101,10 +101,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormProductAutoPart";
-            this.Text = "Часть сборки автомобиля";
+            this.Text = "Изделие";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
