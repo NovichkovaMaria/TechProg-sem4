@@ -4,7 +4,6 @@ using AbstractFactoryBusinessLogic.Enums;
 using AbstractFactoryBusinessLogic.HelperModels;
 using AbstractFactoryBusinessLogic.Interfaces;
 
-
 namespace AbstractFactoryBusinessLogic.BusinessLogics
 {
     public class MainLogic
@@ -95,5 +94,5 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
                 Status = OrderStatus.Оплачен
             });
         }
-    }
+   }
 }

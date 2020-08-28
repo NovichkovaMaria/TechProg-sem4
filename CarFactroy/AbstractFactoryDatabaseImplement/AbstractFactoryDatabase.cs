@@ -1,7 +1,6 @@
 ﻿using AbstractFactoryDatabaseImplement.Models;
 using Microsoft.EntityFrameworkCore;
 
-
 namespace AbstractFactoryDatabaseImplement
 {
     public class AbstractFactoryDatabase : DbContext

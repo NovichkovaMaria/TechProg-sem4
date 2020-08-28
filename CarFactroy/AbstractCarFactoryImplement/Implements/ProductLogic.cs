@@ -81,7 +81,7 @@ namespace AbstractFactoryListImplement.Implements
                     (model.ProductAutoParts.ContainsKey(source.ProductAutoParts[i].AutoPartId))
                     {
                         source.ProductAutoParts[i].Count =
-                        model.ProductAutoParts[source.ProductAutoParts[i].AutoPartId].Item2;
+                        model.ProductAutoParts[source.ProductAutoParts[i].AutoPartId].Item2;                  
                         model.ProductAutoParts.Remove(source.ProductAutoParts[i].AutoPartId);
                     }
                     else

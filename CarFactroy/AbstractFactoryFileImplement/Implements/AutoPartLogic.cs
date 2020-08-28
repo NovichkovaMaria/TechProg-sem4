@@ -6,7 +6,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace AbstractFactoryFileImplement.Implements
 {
     public class AutoPartLogic : IAutoPartLogic
@@ -22,7 +21,7 @@ namespace AbstractFactoryFileImplement.Implements
            == model.AutoPartName && rec.Id != model.Id);
             if (element != null)
             {
-                throw new Exception("Уже есть часть с таким названием");
+                throw new Exception("Уже есть цветок с таким названием");
             }
             if (model.Id.HasValue)
             {
