@@ -1,4 +1,4 @@
-﻿namespace AbstractCarFactoryView
+namespace AbstractCarFactoryView
 {
     partial class FormAutoPart
     {
@@ -83,7 +83,6 @@
             this.Text = "Часть для сборки";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
@@ -94,4 +93,3 @@
         private System.Windows.Forms.Button buttonCancel;
     }
 }
-

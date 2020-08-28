@@ -136,7 +136,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportOrdersViewModelBindingSource)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         #endregion

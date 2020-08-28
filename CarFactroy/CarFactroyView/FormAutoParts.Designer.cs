@@ -1,4 +1,4 @@
-﻿namespace AbstractCarFactoryView
+namespace AbstractCarFactoryView
 {
     partial class FormAutoParts
     {
@@ -101,7 +101,6 @@
             this.Load += new System.EventHandler(this.FormComponents_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         #endregion

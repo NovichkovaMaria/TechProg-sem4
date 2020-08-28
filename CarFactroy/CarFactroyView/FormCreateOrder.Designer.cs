@@ -1,4 +1,4 @@
-﻿namespace AbstractCarFactoryView
+namespace AbstractCarFactoryView
 {
     partial class FormCreateOrder
     {
@@ -156,7 +156,6 @@
             this.Load += new System.EventHandler(this.FormCreateOrder_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
