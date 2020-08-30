@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using AbstractFactoryBusinessLogic.ViewModels;
+using AbstractFactoryBusinessLogic.ViewModels;
+
 namespace AbstractFactoryBusinessLogic.HelperModels
 {
     class PdfInfo
