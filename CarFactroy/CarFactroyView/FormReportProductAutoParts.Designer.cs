@@ -103,7 +103,7 @@
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.ButtonSaveToExcel);
             this.Name = "FormReportProductAutoParts";
-            this.Text = "FormReportProductAutoParts";
+            this.Text = "Отчет изделий по частям";
             this.Load += new System.EventHandler(this.FormReportProductAutoParts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);

@@ -112,9 +112,10 @@
             this.Controls.Add(this.dateTimePickerTo);
             this.Controls.Add(this.dateTimePickerFrom);
             this.Name = "FormReportOrders";
-            this.Text = "FormReportOrders";
+            this.Text = "Отчет по заказам";
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion

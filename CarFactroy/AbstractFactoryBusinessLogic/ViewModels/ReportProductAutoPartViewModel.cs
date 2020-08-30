@@ -8,6 +8,6 @@ namespace AbstractFactoryBusinessLogic.ViewModels
     {
         public string AutoPartName { get; set; }
         public int TotalCount { get; set; }
-        public List<Tuple<string, int>> Products { get; set; }
+        public string ProductName { get; set; }
     }
 }
