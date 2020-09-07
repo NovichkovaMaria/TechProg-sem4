@@ -71,7 +71,7 @@ namespace AbstractFactoryListImplement.Implements
                         result.Add(CreateViewModel(order));
                         break;
                     }
-                    continue;
+                        continue;
                 }
                 result.Add(CreateViewModel(order));
             }

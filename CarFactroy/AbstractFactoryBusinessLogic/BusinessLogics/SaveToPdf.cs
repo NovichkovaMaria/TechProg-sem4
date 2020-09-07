@@ -32,16 +32,17 @@ namespace AbstractFactoryBusinessLogic.BusinessLogics
                 Style = "NormalTitle",
                 ParagraphAlignment = ParagraphAlignment.Center
             });
-            foreach (var sf in info.ProductAutoParts)
+
+            foreach (var pa in info.ProductAutoParts)
             {
                 CreateRow(new PdfRowParameters
                 {
                     Table = table,
                     Texts = new List<string>
                     {
-                        sf.ProductName,
-                        sf.AutoPartName,
-                        sf.Count.ToString()
+                        pa.ProductName,
+                        pa.AutoPartName,
+                        pa.TotalCount.ToString()
                     },
                     Style = "Normal",
                     ParagraphAlignment = ParagraphAlignment.Left
